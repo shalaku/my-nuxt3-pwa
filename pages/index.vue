@@ -22,10 +22,10 @@
     }
     
     // 2. 通知の権限をリクエスト
-    if (!('Notification' in window)) {
-      alert('ブラウザが通知に対応していません。')
-      return
-    }
+    // if (!('Notification' in window)) {
+    //   alert('ブラウザが通知に対応していません。')
+    //   return
+    // }
     const permission = await Notification.requestPermission()
     if (permission !== 'granted') {
       alert('通知が許可されませんでした。')
